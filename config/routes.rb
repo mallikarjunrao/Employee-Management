@@ -4,7 +4,7 @@ Employement::Application.routes.draw do
 
  get   "load_subcategories",     :on=> :collection
          
-
+ get "delete_user_photo", :on=> :collection
   end
 
   resources :subcategories

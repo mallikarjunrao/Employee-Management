@@ -53,7 +53,7 @@ def load_subcategories
   # POST /employees
   # POST /employees.xml
   def create
-    @employee = Employee.new(params[:employee])
+    @employee = Employee.create(params[:employee])
 
     respond_to do |format|
       if @employee.save
@@ -84,6 +84,21 @@ def load_subcategories
 
   # DELETE /employees/1
   # DELETE /employees/1.xml
+def delete_user_photo
+
+@employee=Employee.find(params[:id])
+@employee.avatar.destroy
+  respond_to do |format|
+      if @employee.save
+      flash[:notice] = "saved" 
+      else
+      flash[:notice] = "Not saved" 
+      end
+      format.html { redirect_to employees_path }
+      format.xml  { head :ok }      
+ end
+end
+
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy

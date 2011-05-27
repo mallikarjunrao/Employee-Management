@@ -39,7 +39,15 @@
   <b>Designation:</b>
   <%= @employee.designation %>
 </p>
+<td>
 
 
+
+<% if @employee.avatar.exists? then %>
+	           <%= image_tag @employee.avatar.url %>
+            <% else %>
+               <img src="/images/guest_large.jpg"  border="0" alt="profile pic" />
+           <% end %>
+	           
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

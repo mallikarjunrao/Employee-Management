@@ -2175,3 +2175,837 @@ Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:44 +0530
   [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `employees`[0m
 Rendered employees/index.html.erb within layouts/application (43.2ms)
 Completed 200 OK in 74ms (Views: 50.8ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (171.0ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (226.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (145.4ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (292.2ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (301.8ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (56.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+Migrating to CreateCategories (20110526105908)
+  [1m[35mSQL (147.1ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (57.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105908')[0m
+Migrating to CreateSubcategories (20110526110513)
+  [1m[35mSQL (140.0ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (57.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526110513')[0m
+Migrating to CreateEmployees (20110526111334)
+  [1m[35mSQL (139.7ms)[0m  CREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `middlename` varchar(255), `lastname` varchar(255), `dob` date, `address` varchar(255), `phoneno` varchar(255), `mailid` varchar(255), `designation` varchar(255), `category_id` varchar(255), `subcategory_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (57.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526111334')[0m
+Migrating to AddFilesPhotoDocument (20110527062222)
+  [1m[35mSQL (283.3ms)[0m  ALTER TABLE `employees` ADD `file_file_name` varchar(255)
+  [1m[36mSQL (269.1ms)[0m  [1mALTER TABLE `employees` ADD `file_content_type` varchar(255)[0m
+  [1m[35mSQL (251.1ms)[0m  ALTER TABLE `employees` ADD `file_file_size` int(11)
+  [1m[36mSQL (284.5ms)[0m  [1mALTER TABLE `employees` ADD `file_updated_at` datetime[0m
+  [1m[35mSQL (48.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110527062222')
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  describe `categories`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `categories`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `employees`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `employees`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `models`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (0.8ms)[0m  describe `subcategories`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `subcategories`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 12:01:49 +0530
+  Processing by HomeController#home as HTML
+Completed   in 1ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 12:01:50 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 66ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:02:02 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered employees/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 53ms (Views: 13.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 12:02:05 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (82.8ms)
+Rendered employees/new.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 106ms (Views: 91.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:02:19 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"ggg", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "file"=>"examples.desktop"}, "commit"=>"Create Employee"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `employees`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`) VALUES ('ggg', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 06:32:20', '2011-05-27 06:32:20', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (76.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 156ms
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:02:20 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 39ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:02:21 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 62ms (Views: 39.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:03:57 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 60ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 12:03:59 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (35.5ms)
+Rendered employees/new.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 64ms (Views: 44.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:04:07 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"dddddd", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "file"=>#<ActionDispatch::Http::UploadedFile:0x00000001e55d20 @original_filename="README", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"README\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-1mi9xxc>>}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `employees`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`) VALUES ('dddddd', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 06:34:07', '2011-05-27 06:34:07', 'README', 'application/octet-stream', 0, '2011-05-27 06:34:07')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/indigenius/malli_workspace/Employee-Management/public/system/files/2/original/README.
+  [1m[35mSQL (39.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 217ms
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2011-05-27 12:04:08 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 60ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:04:09 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 63ms (Views: 40.5ms | ActiveRecord: 0.9ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (143.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (234.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (326.4ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (292.9ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (292.2ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+Migrating to CreateCategories (20110526105908)
+  [1m[35mSQL (138.2ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105908')[0m
+Migrating to CreateSubcategories (20110526110513)
+  [1m[35mSQL (140.2ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (48.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526110513')[0m
+Migrating to CreateEmployees (20110526111334)
+  [1m[35mSQL (129.6ms)[0m  CREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `middlename` varchar(255), `lastname` varchar(255), `dob` date, `address` varchar(255), `phoneno` varchar(255), `mailid` varchar(255), `designation` varchar(255), `category_id` varchar(255), `subcategory_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526111334')[0m
+Migrating to AddFilesPhotoDocument (20110527062222)
+  [1m[35mSQL (298.8ms)[0m  ALTER TABLE `employees` ADD `file_file_name` varchar(255)
+  [1m[36mSQL (268.0ms)[0m  [1mALTER TABLE `employees` ADD `file_content_type` varchar(255)[0m
+  [1m[35mSQL (336.4ms)[0m  ALTER TABLE `employees` ADD `file_file_size` int(11)
+  [1m[36mSQL (293.1ms)[0m  [1mALTER TABLE `employees` ADD `file_updated_at` datetime[0m
+  [1m[35mSQL (259.8ms)[0m  ALTER TABLE `employees` ADD `avatar_file_name` varchar(255)
+  [1m[36mSQL (335.6ms)[0m  [1mALTER TABLE `employees` ADD `avatar_content_type` varchar(255)[0m
+  [1m[35mSQL (778.5ms)[0m  ALTER TABLE `employees` ADD `avatar_file_size` int(11)
+  [1m[36mSQL (276.8ms)[0m  [1mALTER TABLE `employees` ADD `avatar_updated_at` datetime[0m
+  [1m[35mSQL (40.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110527062222')
+  [1m[36mSQL (1.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  describe `categories`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `categories`[0m
+  [1m[35mSQL (1.4ms)[0m  describe `employees`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `employees`[0m
+  [1m[35mSQL (1.1ms)[0m  describe `models`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (0.8ms)[0m  describe `subcategories`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `subcategories`[0m
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:17:06 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 12:17:08 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (124.3ms)
+Rendered employees/new.html.erb within layouts/application (133.8ms)
+Completed 200 OK in 164ms (Views: 141.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 12:24:49 +0530
+  Processing by HomeController#home as HTML
+Completed   in 11ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 12:24:49 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 91ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:24:54 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered employees/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 12:24:55 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (57.4ms)
+Rendered employees/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 93ms (Views: 69.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:25:50 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00000003d83eb8 @original_filename="565.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[avatar]\"; filename=\"565.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-1kbvcsx>>, "file"=>#<ActionDispatch::Http::UploadedFile:0x00000003d83e40 @original_filename="print", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"print\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-73ehxl>>}, "commit"=>"Create Employee"}
+Completed   in 47ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: avatar):
+  app/controllers/employees_controller.rb:56:in `new'
+  app/controllers/employees_controller.rb:56:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (165.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (176.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:32:38 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00000003cf15e0 @original_filename="565.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[avatar]\"; filename=\"565.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-qmm2up>>, "file"=>#<ActionDispatch::Http::UploadedFile:0x00000003cf1590 @original_filename="print", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"print\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-sh01hn>>}, "commit"=>"Create Employee"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+Completed   in 32ms
+
+NoMethodError (undefined method `Create' for #<Class:0x00000003cb9230>):
+  app/controllers/employees_controller.rb:56:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (150.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (160.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:32:53 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00000003dcdce8 @original_filename="565.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[avatar]\"; filename=\"565.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-nm3ru2>>, "file"=>#<ActionDispatch::Http::UploadedFile:0x00000003dcdc98 @original_filename="print", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"print\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-1rjkdn8>>}, "commit"=>"Create Employee"}
+Completed   in 51ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: avatar):
+  app/controllers/employees_controller.rb:56:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (156.3ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:33:22 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00000003d019e0 @original_filename="565.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[avatar]\"; filename=\"565.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-al2krf>>, "file"=>#<ActionDispatch::Http::UploadedFile:0x00000003d01918 @original_filename="print", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"print\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-4dru7r>>}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  describe `employees`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 07:03:22', '2011-05-27 07:03:22', 'print', 'application/octet-stream', 3315, '2011-05-27 07:03:22', '565.jpg', 'image/jpeg', 31102, '2011-05-27 07:03:22')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/indigenius/malli_workspace/Employee-Management/public/system/files/1/original/print.
+[paperclip] saving /home/indigenius/malli_workspace/Employee-Management/public/system/avatars/1/original/565.jpg
+  [1m[35mSQL (48.3ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 380ms
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:33:22 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:33:22 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:33:22 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:33:24 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 63ms (Views: 41.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:33:35 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 117ms (Views: 94.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:33:36 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:33:36 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:35:03 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered employees/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 65ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:35:07 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 52ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:35:07 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:35:26 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 67ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:40:05 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 94ms (Views: 73.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:40:24 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 64ms (Views: 43.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 12:40:26 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (62.5ms)
+Rendered employees/new.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 99ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 12:40:35 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "file"=>#<ActionDispatch::Http::UploadedFile:0x00000003dcd1f8 @original_filename="print", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"employee[file]\"; filename=\"print\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-x2ohnq>>}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `employees`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 07:10:36', '2011-05-27 07:10:36', 'print', 'application/octet-stream', 3315, '2011-05-27 07:10:36', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/indigenius/malli_workspace/Employee-Management/public/system/files/2/original/print.
+  [1m[35mSQL (50.3ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 233ms
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2011-05-27 12:40:36 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 123ms (Views: 97.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/avatars/original/missing.png" for 127.0.0.1 at 2011-05-27 12:40:36 +0530
+
+ActionController::RoutingError (No route matches "/avatars/original/missing.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/avatars/original/missing.png" for 127.0.0.1 at 2011-05-27 12:40:36 +0530
+
+ActionController::RoutingError (No route matches "/avatars/original/missing.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:40:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 63ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2011-05-27 12:40:46 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 63ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/avatars/original/missing.png" for 127.0.0.1 at 2011-05-27 12:40:47 +0530
+
+ActionController::RoutingError (No route matches "/avatars/original/missing.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/avatars/original/missing.png" for 127.0.0.1 at 2011-05-27 12:40:47 +0530
+
+ActionController::RoutingError (No route matches "/avatars/original/missing.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-27 12:40:49 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 121ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:42:34 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (93.7ms)
+Completed 200 OK in 123ms (Views: 102.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:42:34 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:42:34 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:44:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 71ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:44:44 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:45:09 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 70ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:48:24 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (58.7ms)
+Completed   in 107ms
+
+ActionView::Template::Error (undefined method `avatar' for nil:NilClass):
+    29:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    31: <td><% if employee.avatar.exists? then %>
+    32: 	           <%= image_tag @employee.avatar.url(:medium) %>
+    33:             <% else %>
+    34:                <img src="/images/guest_thumb.jpg"  border="0" alt="profile pic" />
+    35:            <% end %></td>
+  app/views/employees/index.html.erb:32:in `block in _app_views_employees_index_html_erb___3997272011582739095_32410960__2014341753255394436'
+  app/views/employees/index.html.erb:18:in `each'
+  app/views/employees/index.html.erb:18:in `_app_views_employees_index_html_erb___3997272011582739095_32410960__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (151.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (198.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:48:43 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 108ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:48:43 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/system/avatars/1/medium/565.jpg?1306479802" for 127.0.0.1 at 2011-05-27 12:48:43 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/1/medium/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:48:53 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 77ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:58:16 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (285.9ms)
+Completed   in 309ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000003ff5868>:0x00000003ff1fb0>):
+    29:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    31: <td><% if employee.avatar.exists? then %>
+    32: 	           <%= image_tag employee.avatar.url %><%= link_to 'Delete',delete_user_photo_employees_path(:id => user.id),:confirm => "Are you sure?"%>
+    33:             <% else %>
+    34:                <img src="/images/guest_thumb.jpg"  border="0" alt="profile pic" />
+    35:            <% end %></td>
+  app/views/employees/index.html.erb:32:in `block in _app_views_employees_index_html_erb___3997272011582739095_33523100__2014341753255394436'
+  app/views/employees/index.html.erb:18:in `each'
+  app/views/employees/index.html.erb:18:in `_app_views_employees_index_html_erb___3997272011582739095_33523100__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (103.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (110.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:58:51 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (311.9ms)
+Completed   in 345ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x0000000401c8c8>:0x00000004018610>):
+    29:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    31: <td><% if employee.avatar.exists? then %>
+    32: 	           <%= image_tag employee.avatar.url %><%= link_to 'Delete',delete_user_photo_employees_path(:id => user.id),:confirm => "Are you sure?"%>
+    33:             <% else %>
+    34:                <img src="/images/guest_thumb.jpg"  border="0" alt="profile pic" />
+    35:            <% end %></td>
+  app/views/employees/index.html.erb:32:in `block in _app_views_employees_index_html_erb___3997272011582739095_33601440__2014341753255394436'
+  app/views/employees/index.html.erb:18:in `each'
+  app/views/employees/index.html.erb:18:in `_app_views_employees_index_html_erb___3997272011582739095_33601440__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (105.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (113.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 12:59:34 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (265.8ms)
+Completed   in 346ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000000040e0bd8>:0x000000040d99c8>):
+    29:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    31: <td><% if employee.avatar.exists? then %>
+    32: 	           <%= image_tag employee.avatar.url %><%= link_to 'Delete',delete_user_photo_employees_path(:id => user.id),:confirm => "Are you sure?"%>
+    33:             <% else %>
+    34:                <img src="/images/guest_thumb.jpg"  border="0" alt="profile pic" />
+    35:            <% end %></td>
+  app/views/employees/index.html.erb:32:in `block in _app_views_employees_index_html_erb___3997272011582739095_33997340__2014341753255394436'
+  app/views/employees/index.html.erb:18:in `each'
+  app/views/employees/index.html.erb:18:in `_app_views_employees_index_html_erb___3997272011582739095_33997340__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (157.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:00:02 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (479.1ms)
+Completed   in 517ms
+
+ActionView::Template::Error (undefined local variable or method `employees' for #<#<Class:0x00000003cba068>:0x00000003cb7f98>):
+    29:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    31: <td><% if employee.avatar.exists? then %>
+    32: 	           <%= image_tag employee.avatar.url %><%= link_to 'Delete',delete_user_photo_employees_path(:id => employees.id),:confirm => "Are you sure?"%>
+    33:             <% else %>
+    34:                <img src="/images/guest_thumb.jpg"  border="0" alt="profile pic" />
+    35:            <% end %></td>
+  app/views/employees/index.html.erb:32:in `block in _app_views_employees_index_html_erb___3997272011582739095_31831060__2014341753255394436'
+  app/views/employees/index.html.erb:18:in `each'
+  app/views/employees/index.html.erb:18:in `_app_views_employees_index_html_erb___3997272011582739095_31831060__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (114.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (163.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:00:22 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 76ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/delete_user_photo?id=1" for 127.0.0.1 at 2011-05-27 13:00:25 +0530
+  Processing by EmployeesController#delete_user_photo as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+[paperclip] deleting /home/indigenius/malli_workspace/Employee-Management/public/system/avatars/1/original/565.jpg
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `employees` SET `avatar_file_name` = NULL, `avatar_content_type` = NULL, `avatar_file_size` = NULL, `avatar_updated_at` = NULL, `updated_at` = '2011-05-27 07:30:26' WHERE `employees`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (44.4ms)[0m  [1mCOMMIT[0m
+Completed   in 241ms
+
+NameError (undefined local variable or method `profile' for #<EmployeesController:0x00000002b68eb8>):
+  app/controllers/employees_controller.rb:93:in `block in delete_user_photo'
+  app/controllers/employees_controller.rb:91:in `delete_user_photo'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (172.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (182.9ms)
+
+
+Started GET "/employees/delete_user_photo?id=1" for 127.0.0.1 at 2011-05-27 13:02:58 +0530
+  Processing by EmployeesController#delete_user_photo as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 57ms
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:02:58 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered employees/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 112ms (Views: 31.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 13:03:18 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (65.0ms)
+Rendered employees/new.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 102ms (Views: 79.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 13:03:22 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"rrrrrrrrrr", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('rrrrrrrrrr', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 07:33:22', '2011-05-27 07:33:22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (71.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 142ms
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2011-05-27 13:03:22 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 119ms (Views: 96.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/3/edit" for 127.0.0.1 at 2011-05-27 13:03:28 +0530
+  Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (75.8ms)
+Rendered employees/edit.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 118ms (Views: 91.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/employees/3" for 127.0.0.1 at 2011-05-27 13:03:35 +0530
+  Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"rrrrrrrrrr", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000040484c8 @original_filename="565.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[avatar]\"; filename=\"565.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110527-2311-15irc79>>}, "commit"=>"Update Employee", "id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `employees` SET `avatar_file_name` = '565.jpg', `avatar_content_type` = 'image/jpeg', `avatar_file_size` = 31102, `avatar_updated_at` = '2011-05-27 07:33:35', `updated_at` = '2011-05-27 07:33:35' WHERE `employees`.`id` = 3[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/indigenius/malli_workspace/Employee-Management/public/system/avatars/3/original/565.jpg
+  [1m[35mSQL (57.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 221ms
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2011-05-27 13:03:35 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 50ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:03:37 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 75ms (Views: 51.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:05:24 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 134ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/system/avatars/3/slide/565.jpg?1306481615" for 127.0.0.1 at 2011-05-27 13:05:24 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/3/slide/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/system/avatars/3/slide/565.jpg?1306481615" for 127.0.0.1 at 2011-05-27 13:05:24 +0530
+
+ActionController::RoutingError (No route matches "/system/avatars/3/slide/565.jpg"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:06:15 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 77ms (Views: 54.9ms | ActiveRecord: 0.4ms)

@@ -4,7 +4,7 @@ gem 'rails', '3.0.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'paperclip','~> 2.3'
 gem "will_paginate", "3.0.pre2" 
 gem 'mysql2', '0.2.7'
 gem 'rake', '~> 0.8.7'
