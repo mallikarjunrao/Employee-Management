@@ -1,0 +1,2177 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 12:02:34 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 12:04:18 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 12:04:18 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 12:12:36 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 14:33:57 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:31:33 +0530
+
+Mysql2::Error (Unknown database 'employement_development'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (164.2ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (268.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:31:54 +0530
+  Processing by HomeController#home as HTML
+Rendered home/home.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (156.9ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (258.8ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (292.0ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (48.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `models`
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:39:13 +0530
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x000000024bc920>):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:41:33 +0530
+  Processing by HomeController#home as HTML
+Completed   in 1ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 15:41:33 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 51ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 15:41:35 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 60ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 15:41:39 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-26 15:42:13 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjunrao@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjunrao@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  describe `models`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `created_at`, `updated_at`) VALUES ('mallikarjunrao@gmail.com', '$2a$10$PzY2w3aPi252HallUhXlDOtFqGw7vWd9.pKZh9ypVVVW8F.8F5xPu', '$2a$10$PzY2w3aPi252HallUhXlDO', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-05-26 10:12:14', '2011-05-26 10:12:14')[0m
+  [1m[35mSQL (67.4ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `models` SET `last_sign_in_at` = '2011-05-26 10:12:14', `current_sign_in_at` = '2011-05-26 10:12:14', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-05-26 10:12:14' WHERE `models`.`id` = 1
+  [1m[36mSQL (51.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 470ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:42:14 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1
+Rendered home/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 61ms (Views: 6.9ms | ActiveRecord: 122.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:44:01 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1[0m
+Completed   in 51ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x000000028547b8>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (85.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 15:45:03 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1
+Completed   in 121ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x00000002d7e658>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (79.6ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 15:45:06 +0530
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1[0m
+Completed   in 42ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x00000003ee3768>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (89.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (98.4ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 15:46:31 +0530
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1
+Completed   in 42ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x00000003cd21e0>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (62.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.4ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2011-05-26 15:46:34 +0530
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1[0m
+Completed   in 41ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x00000003fc5028>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (79.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `models`
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2011-05-26 16:00:26 +0530
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1
+Completed   in 43ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Model:0x00000003cf9c40>):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (58.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.3ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (110.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (250.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (108.1ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (268.1ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (266.7ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (56.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `models`
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2011-05-26 16:05:33 +0530
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 1 LIMIT 1[0m
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/passwords/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 66ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:05:36 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 67ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:05:41 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 64ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:05:47 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjunrao@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mModel Load (0.5ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'mallikarjunrao@gmail.com' LIMIT 1
+Completed   in 29ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjunrao@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 224ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:05:59 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 64ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-26 16:06:09 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('malli')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/registrations/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 214ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-26 16:06:20 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli@malli.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.3ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('malli@malli.com')) LIMIT 1[0m
+  [1m[35mModel Load (0.3ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'mjMHrruzFWPGH4ArjoT5' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `models`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('malli@malli.com', '$2a$10$aFN8QoqMwchU9COk4t.r2.UDRVR8/cqdG0RkW.BN3wjuJIKQYPmni', '$2a$10$aFN8QoqMwchU9COk4t.r2.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'mjMHrruzFWPGH4ArjoT5', NULL, '2011-05-26 10:36:20', '2011-05-26 10:36:20', '2011-05-26 10:36:20')
+Rendered devise/mailer/confirmation_instructions.html.erb (18.1ms)
+  [1m[36mSQL (52.4ms)[0m  [1mROLLBACK[0m
+Completed   in 2101ms
+
+ActionView::Template::Error (Missing host to link to! Please provide :host parameter or set default_url_options[:host]):
+    2: 
+    3: <p>You can confirm your account through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+  app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__3865510300933285656_34303680__1991930863201825195'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (107.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (114.5ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2011-05-26 16:06:55 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/passwords/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 61ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:14:37 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 123ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-26 16:14:49 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"chinni@chinni.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('chinni@chinni.com')) LIMIT 1[0m
+  [1m[35mModel Load (0.3ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = '0mhxIpZkXNJmWsyRcXm9' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `models`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('chinni@chinni.com', '$2a$10$IfwxHTc.0yfv9Z29kZuDI.he7LMv2dKFwLWMKmX19Z8j.hGIh6zqW', '$2a$10$IfwxHTc.0yfv9Z29kZuDI.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0mhxIpZkXNJmWsyRcXm9', NULL, '2011-05-26 10:44:49', '2011-05-26 10:44:49', '2011-05-26 10:44:49')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.9ms)
+  [1m[36mSQL (79.8ms)[0m  [1mROLLBACK[0m
+Completed   in 334ms
+
+ActionView::Template::Error (Missing host to link to! Please provide :host parameter or set default_url_options[:host]):
+    2: 
+    3: <p>You can confirm your account through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+  app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__3865510300933285656_34329800__1991930863201825195'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.6ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:15:26 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 64ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:15:27 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 123ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-26 16:19:08 +0530
+  Processing by HomeController#home as HTML
+Completed   in 22ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:19:08 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (141.5ms)
+Completed   in 231ms
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x007fe62c7c6068>:0x007fe62c7c3ef8>):
+    7:   <%= csrf_meta_tag %>
+    8: </head>
+    9: <body>
+    10:   <%if user_signed_in? %>
+    11:      Hello, <%= current_user.fname %> |
+    12:     <%= link_to "Sign_out",destroy_model_session_path %>
+    13:   <% else %> 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1555283274709352381_70313282767660__1991930863201825195'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (83.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (89.8ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:19:20 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 115ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:19:24 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.5ms)
+Rendered devise/registrations/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 65ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:19:26 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 65ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-26 16:19:38 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 66ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-26 16:21:47 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.8ms)
+Rendered devise/registrations/new.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 124ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-26 16:23:34 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjunrao@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjunrao@gmail.com')) LIMIT 1[0m
+  [1m[35mModel Load (0.3ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'A64_kSmsSTGysOlmhQ0h' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `models`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('mallikarjunrao@gmail.com', '$2a$10$0ky.Kj0EcjCbSBOFjiZMG.OYO4BLNE45eYyzt5W3u3mnAzvbVHXeW', '$2a$10$0ky.Kj0EcjCbSBOFjiZMG.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'A64_kSmsSTGysOlmhQ0h', NULL, '2011-05-26 10:53:34', '2011-05-26 10:53:34', '2011-05-26 10:53:34')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+  [1m[36mSQL (71.3ms)[0m  [1mROLLBACK[0m
+Completed   in 321ms
+
+ActionView::Template::Error (Missing host to link to! Please provide :host parameter or set default_url_options[:host]):
+    2: 
+    3: <p>You can confirm your account through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+  app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__3865510300933285656_34677600__1991930863201825195'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (125.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (132.5ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+Migrating to CreateCategories (20110526105908)
+  [1m[35mSQL (163.7ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (57.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105908')[0m
+Migrating to CreateSubcategories (20110526105945)
+  [1m[35mSQL (148.2ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `category_id` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (57.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105945')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `models`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `subcategories`
+
+
+Started GET "/categories/nwe" for 127.0.0.1 at 2011-05-26 16:31:57 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"nwe"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 0 LIMIT 1[0m
+Completed   in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find Category with ID=nwe):
+  app/controllers/categories_controller.rb:16:in `show'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (104.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-05-26 16:32:01 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (63.1ms)
+Rendered categories/new.html.erb within layouts/application (90.6ms)
+Completed 200 OK in 111ms (Views: 98.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-05-26 16:32:49 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "category"=>{"name"=>"Department-1", "description"=>"sss"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  describe `categories`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Department-1', 'sss', '2011-05-26 11:02:49', '2011-05-26 11:02:49')[0m
+  [1m[35mSQL (68.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 97ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-05-26 16:32:49 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+Rendered categories/show.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 56ms (Views: 41.0ms | ActiveRecord: 70.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-05-26 16:33:12 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+Rendered categories/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 36ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-05-26 16:33:16 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "category"=>{"name"=>"Department-1", "description"=>"sss"}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Department-1', 'sss', '2011-05-26 11:03:16', '2011-05-26 11:03:16')
+  [1m[36mSQL (63.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 93ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-05-26 16:33:16 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 24ms (Views: 13.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-05-26 16:33:36 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 37ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-05-26 16:33:37 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 96ms (Views: 83.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-05-26 16:33:42 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+Rendered subcategories/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 26ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:33:43 +0530
+  Processing by SubcategoriesController#new as HTML
+Rendered subcategories/_form.html.erb (14.6ms)
+Rendered subcategories/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 42ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:36:25 +0530
+  Processing by SubcategoriesController#new as HTML
+Rendered subcategories/_form.html.erb (8.2ms)
+Rendered subcategories/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 42ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:38:14 +0530
+  Processing by SubcategoriesController#new as HTML
+ERROR: compiling _app_views_subcategories__form_html_erb__1038892912771956085_70313282736520_1351929465503016709 RAISED /home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:17: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+unmatched close parenthesis: /div>
+
+  <div class="field">
+    <%= f.label :name );@output_buffer.safe_concat('<br /
+unmatched close parenthesis: /div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :description );@output_buffer.safe_concat('<br /
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:29: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </i
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:30: unterminated string meets end of file
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:30: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_subcategories__form_html_erb__1038892912771956085_70313282736520_1351929465503016709(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "subcategories/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@subcategory) do |f| @output_buffer.safe_concat('
+');   if @subcategory.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@subcategory.errors.count, "error") );@output_buffer.safe_concat(' prohibited this subcategory from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @subcategory.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+Category Name:
+');@output_buffer.append= ( f.collection_select :category_id, Category.find(:all), :id, :name ,{:prompt=> 'Select Category'}
+  </div>
+
+  <div class="field">
+    <%= f.label :name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :description );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_area :description );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:333:in `render_partial'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:262:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:260:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:378:in `_render_partial'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:31:in `render'
+/home/indigenius/malli_workspace/employement/app/views/subcategories/new.html.erb:3:in `_app_views_subcategories_new_html_erb___570232563915652177_70313282747680__1991930863201825195'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:135:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/indigenius/malli_workspace/employement/app/controllers/subcategories_controller.rb:29:in `new'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__2350608272910997125__process_action__1702820143775456587__callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered subcategories/_form.html.erb (2.1ms)
+Rendered subcategories/new.html.erb within layouts/application (4.8ms)
+Completed   in 27ms
+
+ActionView::Template::Error (/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:17: syntax error, unexpected '<', expecting ')'
+  </div>
+   ^
+unmatched close parenthesis: /div>
+
+  <div class="field">
+    <%= f.label :name );@output_buffer.safe_concat('<br /
+unmatched close parenthesis: /div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :description );@output_buffer.safe_concat('<br /
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:29: unknown regexp options - dv
+unmatched close parenthesis: /div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </i
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:30: unterminated string meets end of file
+/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:30: syntax error, unexpected $end, expecting ')'):
+    14:   <div class="field">
+    15: Category Name:
+    16: <%= f.collection_select :category_id, Category.find(:all), :id, :name ,{:prompt=> 'Select Category'}
+    17:   </div>
+    18: 
+    19:   <div class="field">
+    20:     <%= f.label :name %><br />
+  app/views/subcategories/new.html.erb:3:in `_app_views_subcategories_new_html_erb___570232563915652177_70313282747680__1991930863201825195'
+  app/controllers/subcategories_controller.rb:29:in `new'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (125.0ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (134.9ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:38:30 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (107.1ms)
+Rendered subcategories/new.html.erb within layouts/application (112.2ms)
+Completed 200 OK in 135ms (Views: 119.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:39:17 +0530
+  Processing by SubcategoriesController#new as HTML
+ERROR: compiling _app_views_subcategories__form_html_erb__1038892912771956085_70313282271100_1351929465503016709 RAISED /home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...rea :description ,:size =>20X20);@output_buffer.safe_concat('
+...                               ^
+Function body:           def _app_views_subcategories__form_html_erb__1038892912771956085_70313282271100_1351929465503016709(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "subcategories/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@subcategory) do |f| @output_buffer.safe_concat('
+');   if @subcategory.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@subcategory.errors.count, "error") );@output_buffer.safe_concat(' prohibited this subcategory from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @subcategory.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+Category Name:
+');@output_buffer.append= ( f.collection_select :category_id, Category.find(:all), :id, :name ,{:prompt=> 'Select Category'} );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="field">
+    ');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :description );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_area :description ,:size =>20X20);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:333:in `render_partial'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:262:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:260:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/partials.rb:378:in `_render_partial'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:31:in `render'
+/home/indigenius/malli_workspace/employement/app/views/subcategories/new.html.erb:3:in `_app_views_subcategories_new_html_erb___570232563915652177_70313282285820__1991930863201825195'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:135:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/indigenius/malli_workspace/employement/app/controllers/subcategories_controller.rb:29:in `new'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__2350608272910997125__process_action__1702820143775456587__callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered subcategories/_form.html.erb (2.0ms)
+Rendered subcategories/new.html.erb within layouts/application (4.6ms)
+Completed   in 27ms
+
+ActionView::Template::Error (/home/indigenius/malli_workspace/employement/app/views/subcategories/_form.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...rea :description ,:size =>20X20);@output_buffer.safe_concat('
+...                               ^):
+    22:   </div>
+    23:   <div class="field">
+    24:     <%= f.label :description %><br />
+    25:     <%= f.text_area :description ,:size =>20X20%>
+    26:   </div>
+    27:   <div class="actions">
+    28:     <%= f.submit %>
+  app/views/subcategories/new.html.erb:3:in `_app_views_subcategories_new_html_erb___570232563915652177_70313282285820__1991930863201825195'
+  app/controllers/subcategories_controller.rb:29:in `new'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (143.0ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (153.5ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:40:37 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (47.9ms)
+Rendered subcategories/new.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 130ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:40:53 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (48.7ms)
+Rendered subcategories/new.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 77ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 16:41:03 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (46.8ms)
+Rendered subcategories/new.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 77ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+Migrating to CreateCategories (20110526105908)
+Migrating to CreateSubcategories (20110526110513)
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'subcategories' already exists: CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (141.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (250.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (158.9ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (308.5ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (293.2ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (48.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+Migrating to CreateCategories (20110526105908)
+  [1m[35mSQL (155.3ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (40.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105908')[0m
+Migrating to CreateSubcategories (20110526110513)
+  [1m[35mSQL (148.3ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526110513')[0m
+Migrating to CreateEmployees (20110526111334)
+  [1m[35mSQL (189.8ms)[0m  CREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `middlename` varchar(255), `lastname` varchar(255), `dob` date, `address` varchar(255), `phoneno` varchar(255), `mailid` varchar(255), `designation` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (48.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526111334')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `employees`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `models`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `subcategories`
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 17:08:51 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (23.2ms)
+Rendered subcategories/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 41ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:08:57 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Rendered employees/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 26ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (125.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (242.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+  [1m[35mSQL (124.0ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (275.1ms)[0m  CREATE UNIQUE INDEX `index_models_on_email` ON `models` (`email`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `models`[0m
+  [1m[35mSQL (376.1ms)[0m  CREATE UNIQUE INDEX `index_models_on_reset_password_token` ON `models` (`reset_password_token`)
+  [1m[36mSQL (82.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526100535')[0m
+Migrating to CreateCategories (20110526105908)
+  [1m[35mSQL (210.6ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (86.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526105908')[0m
+Migrating to CreateSubcategories (20110526110513)
+  [1m[35mSQL (131.0ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (40.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526110513')[0m
+Migrating to CreateEmployees (20110526111334)
+  [1m[35mSQL (113.5ms)[0m  CREATE TABLE `employees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `middlename` varchar(255), `lastname` varchar(255), `dob` date, `address` varchar(255), `phoneno` varchar(255), `mailid` varchar(255), `designation` varchar(255), `category_id` varchar(255), `subcategory_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (48.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110526111334')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `employees`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `models`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `subcategories`
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:19:44 +0530
+
+SyntaxError (/home/indigenius/malli_workspace/employement/app/controllers/employees_controller.rb:15: syntax error, unexpected ')', expecting ']'):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (80.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (89.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:21:49 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:21:51 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (104.4ms)
+Rendered employees/new.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 133ms (Views: 117.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-05-26 17:22:35 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 36ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-05-26 17:22:38 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (84.0ms)
+Rendered categories/new.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 116ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-05-26 17:22:41 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "category"=>{"name"=>"Department-1", "description"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Department-1', '', '2011-05-26 11:52:41', '2011-05-26 11:52:41')
+  [1m[36mSQL (52.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 86ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-05-26 17:22:41 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 44ms (Views: 22.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-05-26 17:22:42 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 38ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-05-26 17:22:45 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (11.9ms)
+Rendered categories/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-05-26 17:22:51 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "category"=>{"name"=>"Department-2", "description"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Department-2', '', '2011-05-26 11:52:51', '2011-05-26 11:52:51')
+  [1m[36mSQL (51.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 84ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-05-26 17:22:51 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 39ms (Views: 21.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-05-26 17:22:52 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 110ms (Views: 94.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-05-26 17:22:57 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+Rendered subcategories/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 17:22:59 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (100.8ms)
+Rendered subcategories/new.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 134ms (Views: 114.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:09 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "subcategory"=>{"category_id"=>"1", "name"=>"Finance", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `subcategories` (`name`, `description`, `category_id`, `created_at`, `updated_at`) VALUES ('Finance', '', '1', '2011-05-26 11:53:09', '2011-05-26 11:53:09')
+  [1m[36mSQL (56.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subcategories/1
+Completed 302 Found in 94ms
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2011-05-26 17:23:09 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSubcategory Load (0.6ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 101ms (Views: 76.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:10 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+Rendered subcategories/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 44ms (Views: 26.3ms | ActiveRecord: 113.3ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 17:23:12 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (114.3ms)
+Rendered subcategories/new.html.erb within layouts/application (120.6ms)
+Completed 200 OK in 148ms (Views: 128.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:17 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "subcategory"=>{"category_id"=>"2", "name"=>"HR", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `subcategories`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `subcategories` (`name`, `description`, `category_id`, `created_at`, `updated_at`) VALUES ('HR', '', '2', '2011-05-26 11:53:17', '2011-05-26 11:53:17')[0m
+  [1m[35mSQL (63.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/subcategories/2
+Completed 302 Found in 101ms
+
+
+Started GET "/subcategories/2" for 127.0.0.1 at 2011-05-26 17:23:17 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 2 LIMIT 1
+Rendered subcategories/show.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 106ms (Views: 85.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:18 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.4ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+Rendered subcategories/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 44ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 17:23:20 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (124.2ms)
+Rendered subcategories/new.html.erb within layouts/application (131.1ms)
+Completed 200 OK in 158ms (Views: 138.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:28 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "subcategory"=>{"category_id"=>"1", "name"=>"General", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `subcategories` (`name`, `description`, `category_id`, `created_at`, `updated_at`) VALUES ('General', '', '1', '2011-05-26 11:53:28', '2011-05-26 11:53:28')
+  [1m[36mSQL (49.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subcategories/3
+Completed 302 Found in 89ms
+
+
+Started GET "/subcategories/3" for 127.0.0.1 at 2011-05-26 17:23:28 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSubcategory Load (0.4ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 3 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 111ms (Views: 88.8ms | ActiveRecord: 119.8ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:29 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+Rendered subcategories/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 48ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-05-26 17:23:31 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (118.6ms)
+Rendered subcategories/new.html.erb within layouts/application (125.6ms)
+Completed 200 OK in 152ms (Views: 133.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:40 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "subcategory"=>{"category_id"=>"2", "name"=>"Insurence", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `subcategories`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `subcategories` (`name`, `description`, `category_id`, `created_at`, `updated_at`) VALUES ('Insurence', '', '2', '2011-05-26 11:53:40', '2011-05-26 11:53:40')[0m
+  [1m[35mSQL (52.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/subcategories/4
+Completed 302 Found in 89ms
+
+
+Started GET "/subcategories/4" for 127.0.0.1 at 2011-05-26 17:23:40 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 4 LIMIT 1
+Rendered subcategories/show.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 103ms (Views: 81.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-05-26 17:23:40 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "subcategory"=>{"category_id"=>"2", "name"=>"Insurence", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `subcategories` (`name`, `description`, `category_id`, `created_at`, `updated_at`) VALUES ('Insurence', '', '2', '2011-05-26 11:53:40', '2011-05-26 11:53:40')
+  [1m[36mSQL (64.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subcategories/5
+Completed 302 Found in 105ms
+
+
+Started GET "/subcategories/5" for 127.0.0.1 at 2011-05-26 17:23:40 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 5 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 33ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:23:48 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (61.9ms)
+Rendered employees/new.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 93ms (Views: 76.8ms | ActiveRecord: 54.9ms)
+
+
+Started GET "/employees/load_subcategories?id=2&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:23:51 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"2", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '2')[0m
+Completed 200 OK in 32ms (Views: 14.7ms | ActiveRecord: 52.6ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:25:01 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (61.3ms)
+Rendered employees/new.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 92ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=1&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:25:03 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"1", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[36mSubcategory Load (0.6ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '1')[0m
+Completed 200 OK in 111ms (Views: 91.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees/load_subcategories?id=2&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:25:08 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"2", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '2')
+Completed 200 OK in 33ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=1&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:25:12 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"1", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '1')[0m
+Completed 200 OK in 33ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:25:54 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (118.0ms)
+Rendered employees/new.html.erb within layouts/application (122.9ms)
+Completed 200 OK in 146ms (Views: 130.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:26:38 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (120.9ms)
+Rendered employees/new.html.erb within layouts/application (125.9ms)
+Completed 200 OK in 149ms (Views: 133.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:26:53 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (62.3ms)
+Rendered employees/new.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 92ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=2&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:27:22 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"2", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '2')[0m
+Completed 200 OK in 33ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:27:27 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (62.1ms)
+Rendered employees/new.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 91ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:27:53 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (63.8ms)
+Rendered employees/new.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 100ms (Views: 82.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=1&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:27:55 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"1", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '1')
+Completed 200 OK in 95ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:29:44 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (63.2ms)
+Rendered employees/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 93ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=1&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:29:50 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"1", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '1')
+Completed 200 OK in 33ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-26 17:30:19 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"1", "subcategory_id"=>"1", "firstname"=>"mallikarjuna", "middlename"=>"rao", "lastname"=>"duddi", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"26", "address"=>"vijayawada", "phoneno"=>"9948775100", "mailid"=>"malli@malli.com", "designation"=>"TeamLead"}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('mallikarjuna', 'rao', 'duddi', '2011-05-26', 'vijayawada', '9948775100', 'malli@malli.com', 'TeamLead', '1', '1', '2011-05-26 12:00:19', '2011-05-26 12:00:19')
+  [1m[36mSQL (47.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 92ms
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2011-05-26 17:30:19 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 52ms (Views: 33.9ms | ActiveRecord: 50.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:30:20 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 47ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:30:35 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (122.8ms)
+Rendered employees/new.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 152ms (Views: 136.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=1&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:30:37 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"1", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '1')
+Completed 200 OK in 33ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-26 17:31:05 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"1", "subcategory_id"=>"3", "firstname"=>"Arjun", "middlename"=>"palwai", "lastname"=>"dudd", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"26", "address"=>"Vizag", "phoneno"=>"9948775100", "mailid"=>"arjun@arjun.com", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('Arjun', 'palwai', 'dudd', '2011-05-26', 'Vizag', '9948775100', 'arjun@arjun.com', '', '1', '3', '2011-05-26 12:01:05', '2011-05-26 12:01:05')
+  [1m[36mSQL (61.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 168ms
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2011-05-26 17:31:06 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 50ms (Views: 30.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:31:08 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 49ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:31:09 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (63.3ms)
+Rendered employees/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 93ms (Views: 76.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/load_subcategories?id=2&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:31:11 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"2", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '2')
+Completed 200 OK in 33ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-26 17:31:16 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"2", "subcategory_id"=>"2", "firstname"=>"Sravan", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"26", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('Sravan', '', '', '2011-05-26', '', '', '', '', '2', '2', '2011-05-26 12:01:16', '2011-05-26 12:01:16')
+  [1m[36mSQL (53.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 99ms
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2011-05-26 17:31:16 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 53ms (Views: 33.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:31:18 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 57ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 17:31:19 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (117.7ms)
+Rendered employees/new.html.erb within layouts/application (122.7ms)
+Completed 200 OK in 145ms (Views: 130.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/load_subcategories?id=2&authenticity_token=%2BCL%2B4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi%2BrDQKCbzY%3D" for 127.0.0.1 at 2011-05-26 17:31:21 +0530
+  Processing by EmployeesController#load_subcategories as JS
+  Parameters: {"id"=>"2", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY="}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE (category_id = '2')
+Completed 200 OK in 32ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-26 17:31:27 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"2", "subcategory_id"=>"4", "firstname"=>"meena", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"26", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('meena', '', '', '2011-05-26', '', '', '', '', '2', '4', '2011-05-26 12:01:27', '2011-05-26 12:01:27')
+  [1m[36mSQL (50.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/4
+Completed 302 Found in 159ms
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2011-05-26 17:31:27 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 4 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 58ms (Views: 36.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:31:28 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 56ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:44:17 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 19ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x007fe62c73dc68>):
+  app/controllers/employees_controller.rb:6:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (134.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (144.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:46:53 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 122ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x007fe62c7a7410>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (111.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (118.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:47:12 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 115ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x007fe62c5cfef8>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (156.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (163.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 17:47:45 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 18ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x007fe62c782318>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (127.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (136.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:06:45 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Rendered employees/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 54ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 18:06:49 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (124.4ms)
+Rendered employees/new.html.erb within layouts/application (129.3ms)
+Completed 200 OK in 152ms (Views: 136.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-26 18:08:15 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (56.5ms)
+Rendered employees/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 85ms (Views: 69.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:08:20 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 71ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x00000003e86838>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (119.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (170.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:08:49 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 17ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x007fe62c776f68>):
+  app/controllers/employees_controller.rb:6:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (158.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (168.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:09:11 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 17ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x0000000548faf8>):
+  app/controllers/employees_controller.rb:6:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (138.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (148.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:09:34 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 109ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x007fe62c6ac6c8>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (109.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-26 18:09:45 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 124ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x007fe62c59bcc0>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (126.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (135.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 10:18:46 +0530
+  Processing by HomeController#home as HTML
+Completed   in 1ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 10:18:46 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 160ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:19:05 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (20.0ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 163ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x0000000346c960>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (158.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (176.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:27:54 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 105ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x000000025c10f0>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (156.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (165.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:42 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 54ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x00000002566718>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (99.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:43 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 98ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x000000027135e8>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (137.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (144.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:43 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 85ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x000000027d5c10>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (134.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (141.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 84ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x00000003193478>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (139.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (146.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Completed   in 92ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x000000031cc778>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (176.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (186.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:34:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees`
+Completed   in 98ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x000000031f1f00>):
+  app/controllers/employees_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (160.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (168.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:45:51 +0530
+  Processing by EmployeesController#index as HTML
+Completed   in 78ms
+
+NameError (undefined local variable or method `page' for #<EmployeesController:0x00000003502460>):
+  app/controllers/employees_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (97.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (136.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:46:24 +0530
+  Processing by EmployeesController#index as HTML
+Completed   in 106ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x0000000353e938>):
+  app/controllers/employees_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (98.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (105.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 10:46:48 +0530
+  Processing by EmployeesController#index as HTML
+Completed   in 105ms
+
+NameError (undefined local variable or method `per_page' for #<EmployeesController:0x0000000240f270>):
+  app/controllers/employees_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (140.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (149.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:06:52 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.6ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+Rendered employees/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 57ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:06:54 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (100.2ms)
+Rendered employees/new.html.erb within layouts/application (153.3ms)
+Completed 200 OK in 179ms (Views: 160.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:01 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"dd", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.5ms)[0m  describe `employees`
+  [1m[36mAREL (19.3ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('dd', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:01', '2011-05-27 05:37:01')[0m
+  [1m[35mSQL (47.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/5
+Completed 302 Found in 145ms
+
+
+Started GET "/employees/5" for 127.0.0.1 at 2011-05-27 11:07:01 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 5 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 51ms (Views: 32.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:03 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 60ms (Views: 42.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:04 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (63.3ms)
+Rendered employees/new.html.erb within layouts/application (69.6ms)
+Completed 200 OK in 95ms (Views: 78.9ms | ActiveRecord: 69.3ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:06 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"asdf", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `employees`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('asdf', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:06', '2011-05-27 05:37:06')[0m
+  [1m[35mSQL (44.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/6
+Completed 302 Found in 89ms
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2011-05-27 11:07:07 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 6 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 50ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:08 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 105ms (Views: 43.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:10 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (62.3ms)
+Rendered employees/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 136ms (Views: 74.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:14 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"sdfasdf", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  describe `employees`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('sdfasdf', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:14', '2011-05-27 05:37:14')[0m
+  [1m[35mSQL (49.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/7
+Completed 302 Found in 92ms
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2011-05-27 11:07:14 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 7 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 98ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:15 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (87.5ms)
+Completed 200 OK in 112ms (Views: 95.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:17 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (113.9ms)
+Rendered employees/new.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 143ms (Views: 127.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:19 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"fffffffffff", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  describe `employees`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('fffffffffff', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:19', '2011-05-27 05:37:19')[0m
+  [1m[35mSQL (52.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/8
+Completed 302 Found in 96ms
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2011-05-27 11:07:19 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 8 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 96ms (Views: 78.9ms | ActiveRecord: 98.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:20 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 113ms (Views: 95.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:24 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (109.6ms)
+Rendered employees/new.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 139ms (Views: 123.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:27 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"fffffffffffff", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `employees`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('fffffffffffff', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:27', '2011-05-27 05:37:27')[0m
+  [1m[35mSQL (60.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/9
+Completed 302 Found in 147ms
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2011-05-27 11:07:28 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 9 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 32ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:29 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 117ms (Views: 99.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:30 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (110.3ms)
+Rendered employees/new.html.erb within layouts/application (117.8ms)
+Completed 200 OK in 141ms (Views: 125.8ms | ActiveRecord: 62.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:34 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"xxxxxxx", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `employees`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('xxxxxxx', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:34', '2011-05-27 05:37:34')[0m
+  [1m[35mSQL (50.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/10
+Completed 302 Found in 141ms
+
+
+Started GET "/employees/10" for 127.0.0.1 at 2011-05-27 11:07:34 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 10 LIMIT 1[0m
+Rendered employees/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 48ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:35 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `employees`
+Rendered employees/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 63ms (Views: 41.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 11:07:37 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (102.6ms)
+Rendered employees/new.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 131ms (Views: 115.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 11:07:42 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"veddddddddd", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('veddddddddd', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 05:37:42', '2011-05-27 05:37:42')
+  [1m[36mSQL (55.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/employees/11
+Completed 302 Found in 146ms
+
+
+Started GET "/employees/11" for 127.0.0.1 at 2011-05-27 11:07:42 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 11 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 48ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 11:07:44 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.6ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `employees`[0m
+Rendered employees/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 74ms (Views: 50.8ms | ActiveRecord: 1.6ms)

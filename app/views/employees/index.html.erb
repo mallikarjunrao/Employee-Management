@@ -1,0 +1,38 @@
+<h1>Listing employees</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Middlename</th>
+    <th>Lastname</th>
+    <th>Dob</th>
+    <th>Address</th>
+    <th>Phoneno</th>
+    <th>Mailid</th>
+    <th>Designation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.firstname %></td>
+    <td><%= employee.middlename %></td>
+    <td><%= employee.lastname %></td>
+    <td><%= employee.dob %></td>
+    <td><%= employee.address %></td>
+    <td><%= employee.phoneno %></td>
+    <td><%= employee.mailid %></td>
+    <td><%= employee.designation %></td>
+    <td><%= link_to 'Show', employee %></td>
+    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= will_paginate @employees %>
+
+<%= link_to 'New Employee', new_employee_path %>
