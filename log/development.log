@@ -3009,3 +3009,1798 @@ Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:06:15 +0530
   [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
 Rendered employees/index.html.erb within layouts/application (46.6ms)
 Completed 200 OK in 77ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:08:59 +0530
+  Processing by HomeController#home as HTML
+Completed   in 21ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:08:59 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 72ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 13:09:01 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 74ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 13:09:14 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli@malli.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.5ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('malli@malli.com')) LIMIT 1[0m
+  [1m[35mModel Load (0.6ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'gNZS8-6Mj95kvS1izWKh' LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `models`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('malli@malli.com', '$2a$10$KqqccYmeIlKZmLpJhbKnMeRUp7Dhh1u05ftc3VzIqJIrxkdiImrGW', '$2a$10$KqqccYmeIlKZmLpJhbKnMe', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'gNZS8-6Mj95kvS1izWKh', NULL, '2011-05-27 07:39:14', '2011-05-27 07:39:14', '2011-05-27 07:39:14')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to malli@malli.com (174ms)
+Date: Fri, 27 May 2011 13:09:17 +0530
+From: mallikarjunrao@indigenius.com
+To: malli@malli.com
+Message-ID: <4ddf552524a89_90714837c07682e@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome malli@malli.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=gNZS8-6Mj95kvS1izWKh">Confirm my account</a></p>
+  [1m[36mSQL (55.0ms)[0m  [1mCOMMIT[0m
+Completed   in 2700ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:09:17 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 52ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:09:26 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"asdf", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mModel Load (0.6ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'asdf' LIMIT 1
+Completed   in 29ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"asdf", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 162ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:09:39 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli@malli.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mModel Load (0.9ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`email` = 'malli@malli.com' LIMIT 1[0m
+Completed   in 65ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:09:39 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 45ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:10:02 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli@malli.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'malli@malli.com' LIMIT 1
+Completed   in 78ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:10:02 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 52ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 13:10:40 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.5ms)
+Rendered devise/registrations/new.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 148ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 13:10:52 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"chinni@chinni.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('chinni@chinni.com')) LIMIT 1
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'jhHfKZWFvUE4BjcifFDM' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  describe `models`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('chinni@chinni.com', '$2a$10$RpeBn515n4A.JcO0v1ngkudlXcaYuJFpjayoJ12821i7gxSNYdI3O', '$2a$10$RpeBn515n4A.JcO0v1ngku', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'jhHfKZWFvUE4BjcifFDM', NULL, '2011-05-27 07:40:53', '2011-05-27 07:40:53', '2011-05-27 07:40:53')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to chinni@chinni.com (11ms)
+Date: Fri, 27 May 2011 13:10:53 +0530
+From: mallikarjunrao@indigenius.com
+To: chinni@chinni.com
+Message-ID: <4ddf5585157ab_907222eaf07692c@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome chinni@chinni.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=jhHfKZWFvUE4BjcifFDM">Confirm my account</a></p>
+  [1m[35mSQL (50.5ms)[0m  COMMIT
+Completed   in 378ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:10:53 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 51ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/confirmation?confirmation_token=jhHfKZWFvUE4BjcifFDM" for 127.0.0.1 at 2011-05-27 13:11:14 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"jhHfKZWFvUE4BjcifFDM"}
+  [1m[36mModel Load (0.6ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'jhHfKZWFvUE4BjcifFDM' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE `models` SET `confirmation_token` = NULL, `confirmed_at` = '2011-05-27 07:41:14', `updated_at` = '2011-05-27 07:41:14' WHERE `models`.`id` = 2[0m
+  [1m[35mSQL (68.1ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `models` SET `last_sign_in_at` = '2011-05-27 07:41:14', `current_sign_in_at` = '2011-05-27 07:41:14', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-05-27 07:41:14' WHERE `models`.`id` = 2
+  [1m[36mSQL (45.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:11:14 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.5ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Rendered home/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:16:02 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mModel Load (0.1ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Rendered home/home.html.erb within layouts/application (334.1ms)
+Completed   in 368ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000003aae620>:0x00000003a06ab0>):
+    10: 
+    11: 
+    12:   <%if model_signed_in? %>
+    13:      Hello, <%= current_user.firstname %> |
+    14:     <%= link_to "Sign_out",destroy_model_session_path %>
+    15:   <% else %> 
+    16:         <li><%= link_to "Login", new_user_model_path %>&nbsp;&nbsp;</li>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4237820672554014950_30088380__2014341753255394436'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (125.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (134.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:16:10 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Rendered home/home.html.erb within layouts/application (4.7ms)
+Completed   in 58ms
+
+ActionView::Template::Error (undefined method `firstname' for #<Model:0x0000000432b6b8>):
+    10: 
+    11: 
+    12:   <%if model_signed_in? %>
+    13:      Hello, <%= current_model.firstname %> |
+    14:     <%= link_to "Sign_out",destroy_model_session_path %>
+    15:   <% else %> 
+    16:         <li><%= link_to "Login", new_user_model_path %>&nbsp;&nbsp;</li>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4237820672554014950_34366060__2014341753255394436'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (154.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (165.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:16:46 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Rendered home/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/sign_out" for 127.0.0.1 at 2011-05-27 13:16:51 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:16:51 +0530
+  Processing by HomeController#home as HTML
+Completed   in 87ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:16:51 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (290.7ms)
+Completed   in 326ms
+
+ActionView::Template::Error (undefined local variable or method `new_user_model_path' for #<#<Class:0x00000003ff21e0>:0x00000003fe4630>):
+    13:      Hello, <%= current_model.email %> |
+    14:     <%= link_to "Sign_out",destroy_model_session_path %>
+    15:   <% else %> 
+    16:         <li><%= link_to "Login", new_user_model_path %>&nbsp;&nbsp;</li>
+    17:         <li>&nbsp;|&nbsp;</li>
+    18:         <li><%= link_to "Register", new_model_registration_path %></li>
+    19:   <% end %>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__4237820672554014950_33491920__2014341753255394436'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (121.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (128.1ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:17:53 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 130ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:08 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 71ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:12 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 71ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:23 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered devise/sessions/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 119ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:33 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"malli@malli.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mModel Load (0.8ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`email` = 'malli@malli.com' LIMIT 1[0m
+Completed   in 64ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:33 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 128ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:43 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"chinni@chinni.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mModel Load (0.5ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'chinni@chinni.com' LIMIT 1
+Completed   in 195ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"chinni@chinni.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 120ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 13:18:47 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"chinni@chinni.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`email` = 'chinni@chinni.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `models` SET `current_sign_in_at` = '2011-05-27 07:48:47', `sign_in_count` = 2, `updated_at` = '2011-05-27 07:48:47' WHERE `models`.`id` = 2[0m
+  [1m[35mSQL (93.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 278ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 13:18:47 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mModel Load (0.5ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Rendered home/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 57ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:21:54 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mModel Load (0.1ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Rendered employees/index.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 178ms (Views: 89.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 13:21:59 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (130.5ms)
+  [1m[35mModel Load (0.1ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Rendered employees/new.html.erb within layouts/application (171.1ms)
+Completed 200 OK in 201ms (Views: 179.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/delete_user_photo?id=3" for 127.0.0.1 at 2011-05-27 13:54:22 +0530
+  Processing by EmployeesController#delete_user_photo as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 3 LIMIT 1[0m
+[paperclip] deleting /home/indigenius/malli_workspace/Employee-Management/public/system/avatars/3/original/565.jpg
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `employees` SET `avatar_file_name` = NULL, `avatar_content_type` = NULL, `avatar_file_size` = NULL, `avatar_updated_at` = NULL, `updated_at` = '2011-05-27 08:24:22' WHERE `employees`.`id` = 3[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (96.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 239ms
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 13:54:22 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36mModel Load (0.1ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Rendered employees/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 100ms (Views: 75.3ms | ActiveRecord: 98.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 14:00:53 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered employees/_form.html.erb (51.4ms)
+  [1m[36mModel Load (0.1ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Rendered employees/new.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 186ms (Views: 93.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 14:11:51 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1
+Rendered home/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 115ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/sign_out" for 127.0.0.1 at 2011-05-27 14:11:52 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 14:11:52 +0530
+  Processing by HomeController#home as HTML
+Completed   in 19ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:11:52 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 71ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:12:11 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mModel Load (0.6ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'mallikarjun.duddi@gmaill.com' LIMIT 1
+Completed   in 31ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (57.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 237ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 14:12:17 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 71ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 14:12:30 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'lEMyFl6jOcVVqlFjOBHE' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  describe `models`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('mallikarjun.duddi@gmaill.com', '$2a$10$RALCNvsvUFQM6cxgYfpeB..ZWVxj08MSK3k9CPv5wRMoBK4P0od7u', '$2a$10$RALCNvsvUFQM6cxgYfpeB.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'lEMyFl6jOcVVqlFjOBHE', NULL, '2011-05-27 08:42:30', '2011-05-27 08:42:30', '2011-05-27 08:42:30')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to mallikarjun.duddi@gmaill.com (10ms)
+Date: Fri, 27 May 2011 14:12:30 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmaill.com
+Message-ID: <4ddf63f6934ed_90722291a4770e6@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmaill.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=lEMyFl6jOcVVqlFjOBHE">Confirm my account</a></p>
+  [1m[35mSQL (62.7ms)[0m  COMMIT
+Completed   in 282ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:12:30 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 70ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 14:14:44 +0530
+  Processing by HomeController#home as HTML
+Completed   in 18ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:14:44 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 69ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:14:48 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 47ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 14:17:01 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 71ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 14:17:15 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/registrations/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 222ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 14:17:40 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 275ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 14:17:50 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.1ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'wWjS4-NjJWnzGGxYKM_u' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  describe `models`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('mallikarjun.duddi@gmaill.com', '$2a$10$1rzvBMtxMBYnB3ftGJLm2ebc74oldlw0.RFG0rooC.lhBzgnllwdy', '$2a$10$1rzvBMtxMBYnB3ftGJLm2e', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'wWjS4-NjJWnzGGxYKM_u', NULL, '2011-05-27 08:47:50', '2011-05-27 08:47:50', '2011-05-27 08:47:50')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to mallikarjun.duddi@gmaill.com (10ms)
+Date: Fri, 27 May 2011 14:17:50 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmaill.com
+Message-ID: <4ddf6536df43f_90713a49087711c@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmaill.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=wWjS4-NjJWnzGGxYKM_u">Confirm my account</a></p>
+  [1m[35mSQL (59.2ms)[0m  COMMIT
+Completed   in 287ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:17:50 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 47ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 14:27:55 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (133.4ms)
+Rendered employees/new.html.erb within layouts/application (160.2ms)
+Completed 200 OK in 191ms (Views: 168.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 14:28:03 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 70ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 14:28:14 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 73ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/confirmation/new" for 127.0.0.1 at 2011-05-27 14:28:20 +0530
+  Processing by Devise::ConfirmationsController#new as HTML
+Rendered devise/shared/_links.erb (3.2ms)
+Rendered devise/confirmations/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 69ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/confirmation" for 127.0.0.1 at 2011-05-27 14:28:24 +0530
+  Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[35mModel Load (0.5ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`email` = 'mallikarjun.duddi@gmaill.com' LIMIT 1
+Rendered devise/mailer/confirmation_instructions.html.erb (1.8ms)
+
+Sent mail to mallikarjun.duddi@gmaill.com (15ms)
+Date: Fri, 27 May 2011 14:28:24 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmaill.com
+Message-ID: <4ddf67b08d8d6_90721b8aa8772c7@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmaill.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=wWjS4-NjJWnzGGxYKM_u">Confirm my account</a></p>
+Redirected to http://localhost:3000/models/sign_in
+Completed 302 Found in 106ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 14:28:24 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 133ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/confirmation?confirmation_token=wWjS4-NjJWnzGGxYKM_u" for 127.0.0.1 at 2011-05-27 14:38:15 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"wWjS4-NjJWnzGGxYKM_u"}
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'wWjS4-NjJWnzGGxYKM_u' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `models` SET `confirmation_token` = NULL, `confirmed_at` = '2011-05-27 09:08:15', `updated_at` = '2011-05-27 09:08:15' WHERE `models`.`id` = 4[0m
+  [1m[35mSQL (63.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `models` SET `last_sign_in_at` = '2011-05-27 09:08:15', `current_sign_in_at` = '2011-05-27 09:08:15', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-05-27 09:08:15' WHERE `models`.`id` = 4
+  [1m[36mSQL (54.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 14:38:15 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered home/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 99ms (Views: 8.4ms | ActiveRecord: 119.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 14:44:18 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1[0m
+Rendered home/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 58ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 14:44:23 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (57.6ms)
+Completed   in 77ms
+
+ActionView::Template::Error (Missing partial employees/results with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/indigenius/malli_workspace/Employee-Management/app/views", "/usr/lib/ruby/gems/1.9.1/gems/devise-1.1.2/app/views"):
+    1: <h1>Listing employees</h1>
+    2: 
+    3: <%= render 'results'%>
+    4: 
+    5: <%= link_to 'New Employee', new_employee_path %>
+  app/views/employees/index.html.erb:3:in `_app_views_employees_index_html_erb___3997272011582739095_20953960__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (121.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (129.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 14:44:55 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendered employees/index.html.erb within layouts/application (295.4ms)
+Completed   in 327ms
+
+ActionView::Template::Error (undefined method `partial' for #<#<Class:0x00000003de1680>:0x00000003dd5650>):
+    1: <h1>Listing employees</h1>
+    2: 
+    3: <%= partial 'results'%>
+    4: 
+    5: <%= link_to 'New Employee', new_employee_path %>
+  app/views/employees/index.html.erb:3:in `_app_views_employees_index_html_erb___3997272011582739095_32412540__2014341753255394436'
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (118.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (124.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 14:45:47 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+ERROR: compiling _app_views_employees_index_html_erb___3997272011582739095_36148520__2014341753255394436 RAISED /home/indigenius/malli_workspace/Employee-Management/app/views/employees/index.html.erb:3: syntax error, unexpected tASSOC, expecting ')'
+...ut_buffer.append= ( :partial =>'results');@output_buffer.saf...
+...                               ^
+Function body:           def _app_views_employees_index_html_erb___3997272011582739095_36148520__2014341753255394436(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "employees/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Listing employees</h1>
+
+');@output_buffer.append= ( :partial =>'results');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'New Employee', new_employee_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/indigenius/malli_workspace/Employee-Management/app/controllers/employees_controller.rb:9:in `index'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__1492455610080087464__process_action__1979317567765136234__callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/usr/lib/ruby/gems/1.9.1/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.9.1/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed   in 69ms
+
+ActionView::Template::Error (/home/indigenius/malli_workspace/Employee-Management/app/views/employees/index.html.erb:3: syntax error, unexpected tASSOC, expecting ')'
+...ut_buffer.append= ( :partial =>'results');@output_buffer.saf...
+...                               ^):
+    1: <h1>Listing employees</h1>
+    2: 
+    3: <%= :partial =>'results'%>
+    4: 
+    5: <%= link_to 'New Employee', new_employee_path %>
+  app/controllers/employees_controller.rb:9:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (121.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (129.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 14:46:07 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mModel Load (0.1ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered employees/index.html.erb within layouts/application (130.6ms)
+Completed 200 OK in 162ms (Views: 138.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-05-27 15:27:41 +0530
+
+ActionController::RoutingError (No route matches "/users/sign_in"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 15:27:44 +0530
+  Processing by HomeController#home as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered home/home.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 70ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2011-05-27 15:27:53 +0530
+  Processing by EmployeesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered employees/_form.html.erb (119.0ms)
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered employees/new.html.erb within layouts/application (181.1ms)
+Completed 200 OK in 206ms (Views: 186.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2011-05-27 15:27:57 +0530
+  Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "employee"=>{"category_id"=>"", "subcategory_id"=>"", "firstname"=>"", "middlename"=>"", "lastname"=>"", "dob(1i)"=>"2011", "dob(2i)"=>"5", "dob(3i)"=>"27", "address"=>"", "phoneno"=>"", "mailid"=>"", "designation"=>""}, "commit"=>"Create Employee"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `employees`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `employees` (`firstname`, `middlename`, `lastname`, `dob`, `address`, `phoneno`, `mailid`, `designation`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('', '', '', '2011-05-27', '', '', '', '', '', '', '2011-05-27 09:57:57', '2011-05-27 09:57:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (48.9ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/employees/4
+Completed 302 Found in 131ms
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2011-05-27 15:27:57 +0530
+  Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 4 LIMIT 1[0m
+  [1m[35mModel Load (0.1ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered employees/show.html.erb within layouts/application (137.8ms)
+Completed 200 OK in 171ms (Views: 146.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 15:27:59 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.6ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1[0m
+Rendered employees/index.html.erb within layouts/application (131.4ms)
+Completed 200 OK in 162ms (Views: 139.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 15:55:46 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees`
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Rendered employees/index.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 75ms (Views: 59.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 15:57:40 +0530
+  Processing by EmployeesController#index as HTML
+Completed   in 10ms
+
+SyntaxError (/home/indigenius/malli_workspace/Employee-Management/app/models/employee.rb:13: syntax error, unexpected tSYMBEG
+..., "%#{query}%", "%#{query}%").:order =>"created_at  DESC"
+...                               ^):
+  app/controllers/employees_controller.rb:5:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (228.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (238.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2011-05-27 15:57:53 +0530
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36mModel Load (0.2ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1[0m
+Rendered employees/index.html.erb within layouts/application (155.4ms)
+Completed 200 OK in 187ms (Views: 163.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/models/sign_out" for 127.0.0.1 at 2011-05-27 15:59:04 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mModel Load (0.2ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 4 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 15:59:04 +0530
+  Processing by HomeController#home as HTML
+Completed   in 67ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 15:59:04 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 66ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 16:01:05 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 73ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 16:01:07 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 138ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 16:01:20 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = '6zkphX1HgPjfQBZSo0kD' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  describe `models`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('mallikarjun.duddi@gmaill.com', '$2a$10$.Fv2bhcFt1KXftzDQ76rYujmcLK/2KymrHhBYaQemhbsJfCI3E/iK', '$2a$10$.Fv2bhcFt1KXftzDQ76rYu', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '6zkphX1HgPjfQBZSo0kD', NULL, '2011-05-27 10:31:20', '2011-05-27 10:31:20', '2011-05-27 10:31:20')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.5ms)
+
+Sent mail to mallikarjun.duddi@gmaill.com (5426ms)
+Date: Fri, 27 May 2011 16:01:20 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmaill.com
+Message-ID: <4ddf7d78a15f8_153a252c20c320e8@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmaill.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=6zkphX1HgPjfQBZSo0kD">Confirm my account</a></p>
+  [1m[35mSQL (58.1ms)[0m  COMMIT
+Completed   in 5917ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 16:01:26 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 135ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/confirmation?confirmation_token=6zkphX1HgPjfQBZSo0kD" for 127.0.0.1 at 2011-05-27 16:13:50 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"6zkphX1HgPjfQBZSo0kD"}
+  [1m[36mModel Load (0.5ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = '6zkphX1HgPjfQBZSo0kD' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `models` SET `confirmation_token` = NULL, `confirmed_at` = '2011-05-27 10:43:50', `updated_at` = '2011-05-27 10:43:50' WHERE `models`.`id` = 5[0m
+  [1m[35mSQL (41.3ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `models` SET `last_sign_in_at` = '2011-05-27 10:43:50', `current_sign_in_at` = '2011-05-27 10:43:50', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-05-27 10:43:50' WHERE `models`.`id` = 5
+  [1m[36mSQL (53.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 154ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 16:13:50 +0530
+  Processing by HomeController#home as HTML
+  [1m[35mModel Load (0.5ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`id` = 5 LIMIT 1
+Rendered home/home.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 61ms (Views: 12.5ms | ActiveRecord: 97.3ms)
+
+
+Started GET "/models/sign_out" for 127.0.0.1 at 2011-05-27 16:15:50 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.* FROM `models` WHERE `models`.`id` = 5 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 16:15:50 +0530
+  Processing by HomeController#home as HTML
+Completed   in 12ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 16:15:51 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 46ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2011-05-27 16:16:03 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 75ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2011-05-27 16:16:17 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "model"=>{"email"=>"mallikarjun.duddi@gmaill.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mModel Load (0.4ms)[0m  [1mSELECT `models`.`id` FROM `models` WHERE (LOWER(`models`.`email`) = LOWER('mallikarjun.duddi@gmaill.com')) LIMIT 1[0m
+  [1m[35mModel Load (0.4ms)[0m  SELECT `models`.* FROM `models` WHERE `models`.`confirmation_token` = 'ldB5ZrZCCKWBWc55J1wy' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `models`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `models` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('mallikarjun.duddi@gmaill.com', '$2a$10$F3pVC3J2avfECVw0PzCCSeBuMxb2AS6shLmHnPnzN7bD54hAN34C6', '$2a$10$F3pVC3J2avfECVw0PzCCSe', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'ldB5ZrZCCKWBWc55J1wy', NULL, '2011-05-27 10:46:17', '2011-05-27 10:46:17', '2011-05-27 10:46:17')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to mallikarjun.duddi@gmaill.com (5167ms)
+Date: Fri, 27 May 2011 16:16:17 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmaill.com
+Message-ID: <4ddf80f9afd18_153a252d0d0321e@indigenius-945GCM-S2L.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmaill.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/models/confirmation?confirmation_token=ldB5ZrZCCKWBWc55J1wy">Confirm my account</a></p>
+  [1m[36mSQL (44.5ms)[0m  [1mCOMMIT[0m
+Completed   in 5489ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 16:16:22 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 88ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateModels (20110526100535)
+Migrating to CreateCategories (20110526105908)
+Migrating to CreateSubcategories (20110526110513)
+Migrating to CreateEmployees (20110526111334)
+Migrating to AddFilesPhotoDocument (20110527062222)
+Migrating to CreatePosts (20110527104858)
+  [1m[35mSQL (156.3ms)[0m  CREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `mail` varchar(255), `Reason` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110527104858')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `employees`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `employees`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `models`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `models`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `posts`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `subcategories`
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 16:28:13 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:28:15 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.3ms)
+Rendered posts/new.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 61ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:28:31 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"chinni", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"hi"}, "commit"=>"Create Post"}
+Completed   in 27ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:44:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (129.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (138.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:29:45 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"chinni", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"hi"}, "commit"=>"Create Post"}
+Completed   in 50ms
+
+NameError (uninitialized constant Postmailer::Postmail):
+  app/mailers/postmailer.rb:7:in `postmail_email'
+  app/controllers/posts_controller.rb:44:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (208.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (218.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:30:13 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"chinni", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"hi"}, "commit"=>"Create Post"}
+Completed   in 50ms
+
+NameError (uninitialized constant Postmailer::Postmail):
+  app/mailers/postmailer.rb:7:in `postmail_email'
+  app/controllers/posts_controller.rb:44:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (184.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (196.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:31:18 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"chinni", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"hi"}, "commit"=>"Create Post"}
+Completed   in 45ms
+
+NameError (uninitialized constant Postmailer::Postmail):
+  app/mailers/postmailer.rb:7:in `postmail_email'
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (175.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (183.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:33:42 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"chinni", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"hi"}, "commit"=>"Create Post"}
+Completed   in 29ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (216.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (226.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:35:33 +0530
+
+SyntaxError (/home/indigenius/malli_workspace/Employee-Management/app/controllers/posts_controller.rb:46: syntax error, unexpected ')', expecting keyword_end
+...mail], params[:post][:reason])).deliver
+...                               ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (98.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:35:36 +0530
+
+SyntaxError (/home/indigenius/malli_workspace/Employee-Management/app/controllers/posts_controller.rb:46: syntax error, unexpected ')', expecting keyword_end
+...mail], params[:post][:reason])).deliver
+...                               ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:35:40 +0530
+
+SyntaxError (/home/indigenius/malli_workspace/Employee-Management/app/controllers/posts_controller.rb:46: syntax error, unexpected ')', expecting keyword_end
+...mail], params[:post][:reason])).deliver
+...                               ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (91.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (101.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:35:44 +0530
+
+SyntaxError (/home/indigenius/malli_workspace/Employee-Management/app/controllers/posts_controller.rb:46: syntax error, unexpected ')', expecting keyword_end
+...mail], params[:post][:reason])).deliver
+...                               ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:35:53 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered posts/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 61ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:36:03 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"maaaa", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"dddd"}, "commit"=>"Create Post"}
+Completed   in 8ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (193.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (248.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:37:37 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"maaaa", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"dddd"}, "commit"=>"Create Post"}
+Completed   in 9ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (201.8ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:37:48 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"maaaa", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"dddd"}, "commit"=>"Create Post"}
+Completed   in 9ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (189.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (245.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:37:51 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"maaaa", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"dddd"}, "commit"=>"Create Post"}
+Completed   in 8ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (161.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (172.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:46:09 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.2ms)
+Rendered posts/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 63ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:46:17 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"fffffff", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"fffff"}, "commit"=>"Create Post"}
+Completed   in 28ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:46:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (227.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (238.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:57:04 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"fffffff", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"fffff"}, "commit"=>"Create Post"}
+Completed   in 27ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (228.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (238.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 16:57:18 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.4ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 62ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:57:24 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"d", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"ddd"}, "commit"=>"Create Post"}
+Completed   in 22ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (204.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (215.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:58:01 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"d", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"ddd"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('d', 'mallikarjun.duddi@gmail.com', 'ddd', '2011-05-27 11:28:01', '2011-05-27 11:28:01')
+  [1m[36mSQL (77.8ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.text.erb (1.5ms)
+Completed   in 149ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: 
+    4: 
+    5: 
+    6: <%= @postmail.name %>
+  app/views/postmailer/postmail_email.text.erb:6:in `_app_views_postmailer_postmail_email_text_erb__1464084270824861705_43280960__1640421544563814298'
+  app/mailers/postmailer.rb:7:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (164.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (217.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 16:58:34 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"d", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"ddd"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.2ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('d', 'mallikarjun.duddi@gmail.com', 'ddd', '2011-05-27 11:28:34', '2011-05-27 11:28:34')[0m
+  [1m[35mSQL (53.4ms)[0m  COMMIT
+Rendered postmailer/postmail_email.text.erb (0.5ms)
+
+Sent mail to mallikarjun.duddi@gmail.com (4630ms)
+Date: Fri, 27 May 2011 16:58:34 +0530
+From: maillkarjunrao@indigenius.com
+To: mallikarjun.duddi@gmail.com
+Message-ID: <4ddf8ae25e740_153a2d2c790322bf@indigenius-945GCM-S2L.mail>
+Subject: malli
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+our wish
+
+
+
+
+
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 4742ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-05-27 16:58:39 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1
+Rendered posts/show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 59ms (Views: 43.4ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 16:58:41 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 17:04:07 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.1ms)
+Rendered posts/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 61ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:04:41 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"mallana", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"im in sick sir so iam unable to come sir"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `posts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('mallana', 'mallikarjun.duddi@gmail.com', 'im in sick sir so iam unable to come sir', '2011-05-27 11:34:41', '2011-05-27 11:34:41')[0m
+  [1m[35mSQL (63.7ms)[0m  COMMIT
+Rendered postmailer/postmail_email.text.erb (1.1ms)
+Completed   in 127ms
+
+ActionView::Template::Error (undefined method `reason' for nil:NilClass):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.text.erb:5:in `_app_views_postmailer_postmail_email_text_erb__1464084270824861705_43609740__1640421544563814298'
+  app/mailers/postmailer.rb:7:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (155.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (167.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:06:12 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"mallana", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"im in sick sir so iam unable to come sir"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('mallana', 'mallikarjun.duddi@gmail.com', 'im in sick sir so iam unable to come sir', '2011-05-27 11:36:12', '2011-05-27 11:36:12')
+  [1m[36mSQL (41.3ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.text.erb (1.6ms)
+Completed   in 106ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x0000000584f7b0>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.text.erb:5:in `_app_views_postmailer_postmail_email_text_erb__1464084270824861705_43506740__1640421544563814298'
+  app/mailers/postmailer.rb:5:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (150.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (160.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:06:17 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"mallana", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"im in sick sir so iam unable to come sir"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.1ms)[0m  describe `posts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('mallana', 'mallikarjun.duddi@gmail.com', 'im in sick sir so iam unable to come sir', '2011-05-27 11:36:17', '2011-05-27 11:36:17')[0m
+  [1m[35mSQL (53.9ms)[0m  COMMIT
+Rendered postmailer/postmail_email.text.erb (1.5ms)
+Completed   in 107ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000005880770>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.text.erb:5:in `_app_views_postmailer_postmail_email_text_erb__1464084270824861705_43555160__1640421544563814298'
+  app/mailers/postmailer.rb:5:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (135.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (144.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:07:12 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"mallana", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"im in sick sir so iam unable to come sir"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('mallana', 'mallikarjun.duddi@gmail.com', 'im in sick sir so iam unable to come sir', '2011-05-27 11:37:12', '2011-05-27 11:37:12')
+  [1m[36mSQL (73.4ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.html.erb (1.1ms)
+Completed   in 125ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000005883880>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__1566239274800242958_43597500__1640421544563814298'
+  app/mailers/postmailer.rb:5:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (174.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (182.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:07:15 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"mallana", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"im in sick sir so iam unable to come sir"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `posts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('mallana', 'mallikarjun.duddi@gmail.com', 'im in sick sir so iam unable to come sir', '2011-05-27 11:37:15', '2011-05-27 11:37:15')[0m
+  [1m[35mSQL (55.4ms)[0m  COMMIT
+Rendered postmailer/postmail_email.html.erb (1.5ms)
+Completed   in 120ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000005899c98>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__1566239274800242958_43635260__1640421544563814298'
+  app/mailers/postmailer.rb:5:in `postmail_email'
+  app/controllers/posts_controller.rb:50:in `block in create'
+  app/controllers/posts_controller.rb:48:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (195.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (206.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 17:11:00 +0530
+  Processing by HomeController#home as HTML
+Completed   in 18ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 17:11:00 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 74ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 17:11:05 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 134ms (Views: 56.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 17:11:12 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.7ms)
+Rendered posts/new.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 63ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:11:28 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7wfaKgeJgiRGGUU5wogTuunb5TgrVmpiLW8EnVf8zg=", "post"=>{"name"=>"dd", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"chiiti"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `posts`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('dd', 'mallikarjun.duddi@gmail.com', 'chiiti', '2011-05-27 11:41:29', '2011-05-27 11:41:29')[0m
+  [1m[35mSQL (73.9ms)[0m  COMMIT
+Rendered postmailer/postmail_email.html.erb (2.0ms)
+Completed   in 142ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000003ed0be0>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__1566239274800242958_30482080__1640421544563814298'
+  app/mailers/postmailer.rb:6:in `postmail_email'
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:47:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (258.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (273.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:12:45 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7wfaKgeJgiRGGUU5wogTuunb5TgrVmpiLW8EnVf8zg=", "post"=>{"name"=>"dd", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"chiiti"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('dd', 'mallikarjun.duddi@gmail.com', 'chiiti', '2011-05-27 11:42:46', '2011-05-27 11:42:46')
+  [1m[36mSQL (57.2ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.html.erb (1.5ms)
+Completed   in 122ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000004e3a220>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__1566239274800242958_38813720__1640421544563814298'
+  app/mailers/postmailer.rb:6:in `postmail_email'
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:47:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (222.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (232.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:13:51 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7wfaKgeJgiRGGUU5wogTuunb5TgrVmpiLW8EnVf8zg=", "post"=>{"name"=>"dd", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"chiiti"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `posts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('dd', 'mallikarjun.duddi@gmail.com', 'chiiti', '2011-05-27 11:43:51', '2011-05-27 11:43:51')[0m
+  [1m[35mSQL (61.7ms)[0m  COMMIT
+Rendered postmailer/postmail_email.html.erb (2.0ms)
+Completed   in 128ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000004d50788>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__1566239274800242958_38738380__1640421544563814298'
+  app/mailers/postmailer.rb:6:in `postmail_email'
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:47:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (247.0ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (256.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 17:47:06 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (23.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 165ms (Views: 111.6ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 17:50:43 +0530
+  Processing by HomeController#home as HTML
+Completed   in 18ms
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-05-27 17:50:43 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 98ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 17:55:12 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered posts/index.html.erb within layouts/application (120.3ms)
+Completed 200 OK in 142ms (Views: 128.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 17:55:14 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (15.6ms)
+Rendered posts/new.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 85ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 17:58:28 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.5ms)
+Rendered posts/new.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 121ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:58:35 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"ssss", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"df"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (18.9ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('ssss', 'mallikarjun.duddi@gmail.com', 'df', '2011-05-27 12:28:35', '2011-05-27 12:28:35')
+  [1m[36mSQL (40.7ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.html.erb (1.7ms)
+Completed   in 294ms
+
+ActionView::Template::Error (undefined method `reason' for #<Post:0x00000004254190>):
+    2: 
+    3: 
+    4: 
+    5: <%= @postmail.reason %>
+  app/views/postmailer/postmail_email.html.erb:5:in `_app_views_postmailer_postmail_email_html_erb__2659531864287727619_26385880_249083914998836360'
+  app/mailers/postmailer.rb:6:in `postmail_email'
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:47:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (135.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (184.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 17:59:00 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"ssss", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"df"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('ssss', 'mallikarjun.duddi@gmail.com', 'df', '2011-05-27 12:29:00', '2011-05-27 12:29:00')
+  [1m[36mSQL (81.5ms)[0m  [1mCOMMIT[0m
+Rendered postmailer/postmail_email.html.erb (0.7ms)
+Rendered postmailer/postmail_email.text.erb (0.6ms)
+
+Sent mail to mallikarjun.duddi@gmail.com (4783ms)
+Date: Fri, 27 May 2011 17:59:00 +0530
+From: maillkarjunrao@indigenius.com
+To: mallikarjun.duddi@gmail.com
+Message-ID: <4ddf990ca2370_6b91b1311c667f7@indigenius-945GCM-S2L.mail>
+Subject: malli
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_4ddf990c7fadd_6b91b1311c664fd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+----==_mimepart_4ddf990c7fadd_6b91b1311c664fd
+Date: Fri, 27 May 2011 17:59:00 +0530
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddf990c90eb8_6b91b1311c665e2@indigenius-945GCM-S2L.mail>
+
+hhhhhhhhhhh
+
+
+
+
+----==_mimepart_4ddf990c7fadd_6b91b1311c664fd
+Date: Fri, 27 May 2011 17:59:00 +0530
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-ID: <4ddf990c9a9bd_6b91b1311c6660@indigenius-945GCM-S2L.mail>
+
+Leave Letter:
+
+
+
+
+
+
+----==_mimepart_4ddf990c7fadd_6b91b1311c664fd--
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 5004ms
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-05-27 17:59:05 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1
+Rendered posts/show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 79ms (Views: 63.8ms | ActiveRecord: 145.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-05-27 17:59:51 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 124ms (Views: 110.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-05-27 18:02:03 +0530
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.1ms)
+Rendered posts/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 60ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-05-27 18:02:09 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+CL+4IE5IBc2Wih3KbcwpDbZAuKUj4Bkzi+rDQKCbzY=", "post"=>{"name"=>"dfdf", "mail"=>"mallikarjun.duddi@gmail.com", "Reason"=>"sssssssssssssssssss"}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `posts` (`name`, `mail`, `Reason`, `created_at`, `updated_at`) VALUES ('dfdf', 'mallikarjun.duddi@gmail.com', 'sssssssssssssssssss', '2011-05-27 12:32:09', '2011-05-27 12:32:09')
+  [1m[36mSQL (64.0ms)[0m  [1mCOMMIT[0m
+Completed   in 100ms
+
+NameError (uninitialized constant PostsController::PostMailer):
+  app/controllers/posts_controller.rb:49:in `block in create'
+  app/controllers/posts_controller.rb:47:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (219.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (229.2ms)

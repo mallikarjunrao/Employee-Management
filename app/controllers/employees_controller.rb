@@ -99,6 +99,31 @@ def delete_user_photo
  end
 end
 
+
+def search_users
+    # action used to display mentors and mentees based on the search query.  
+   if params['search'].strip.empty?
+    @search_users = []
+    flash[:notice] = "No search results found"          
+   else
+    @search_users = Employee.search_users(params['search']).where('role_id != ?',1) 
+    flash[:notice] = "Number of search results found #{@search_users.count}" 
+   end   
+  end  
+
+def search
+    if params['search'].strip.empty?
+       flash[:notice] = "Please provide a Mentor / Mentee name." 
+       redirect_to :action => 'index'         
+    else
+	    @search_users = Employee.search_users(params['search'])
+      respond_to do |format|
+         format.html { redirect_to(:action => "search_users") }
+      end
+    end    
+  end
+
+
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy

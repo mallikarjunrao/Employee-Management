@@ -1,5 +1,6 @@
 <h1>Listing employees</h1>
-
+<%= label_tag(:search, "Search Mentors:") %> 
+<%= text_field_tag :search, params[:search]%>
 <table>
   <tr>
     <th>Firstname</th>

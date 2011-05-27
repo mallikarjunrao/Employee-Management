@@ -1,11 +1,17 @@
 Employement::Application.routes.draw do
+  resources :posts
+
   resources :employees do
 
 
  get   "load_subcategories",     :on=> :collection
          
  get "delete_user_photo", :on=> :collection
-  end
+
+ get   "search",     :on=> :collection
+         
+ get "search_users", :on=> :collection  
+end
 
   resources :subcategories
 
